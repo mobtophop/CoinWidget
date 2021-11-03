@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9pW-Ln-jJR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Coin-->
+        <scene sceneID="6kS-Pv-HQL">
+            <objects>
+                <viewController id="qmx-sv-MK8" customClass="MyCoinListViewController" customModule="CoinMarketInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ics-vp-utd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HuD-Oz-oxw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rNC-Gb-dHl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rNC-Gb-dHl" firstAttribute="bottom" secondItem="HuD-Oz-oxw" secondAttribute="bottom" id="BzA-WS-HwX"/>
+                            <constraint firstItem="HuD-Oz-oxw" firstAttribute="top" secondItem="rNC-Gb-dHl" secondAttribute="top" id="DaR-0a-ch6"/>
+                            <constraint firstItem="rNC-Gb-dHl" firstAttribute="trailing" secondItem="HuD-Oz-oxw" secondAttribute="trailing" id="gA3-sj-FPR"/>
+                            <constraint firstItem="HuD-Oz-oxw" firstAttribute="leading" secondItem="rNC-Gb-dHl" secondAttribute="leading" id="hcb-bI-q7m"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Coin" image="bitcoinsign.circle.fill" catalog="system" id="Pp8-Ar-QwV">
+                        <color key="badgeColor" systemColor="systemOrangeColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="HuD-Oz-oxw" id="2Um-0C-85D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcX-l4-DMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="466"/>
+        </scene>
+        <!--All Coin View Controller-->
+        <scene sceneID="xpw-Ef-xBw">
+            <objects>
+                <viewController id="n5f-ow-UqK" customClass="AllCoinViewController" customModule="CoinMarketInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FYD-g0-BBV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fKx-Vf-Bm1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GYZ-tg-Ge6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fKx-Vf-Bm1" firstAttribute="top" secondItem="GYZ-tg-Ge6" secondAttribute="top" id="1ae-ow-L1e"/>
+                            <constraint firstItem="GYZ-tg-Ge6" firstAttribute="trailing" secondItem="fKx-Vf-Bm1" secondAttribute="trailing" id="GUF-RS-tEQ"/>
+                            <constraint firstItem="fKx-Vf-Bm1" firstAttribute="leading" secondItem="GYZ-tg-Ge6" secondAttribute="leading" id="IJd-Cl-5h6"/>
+                            <constraint firstItem="GYZ-tg-Ge6" firstAttribute="bottom" secondItem="fKx-Vf-Bm1" secondAttribute="bottom" id="lna-wH-pRr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="psj-cl-QYx"/>
+                    <connections>
+                        <outlet property="tableView" destination="fKx-Vf-Bm1" id="15R-hB-0X3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3T-ww-k40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2344.9275362318845" y="-473.4375"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="y4E-8P-JVd">
+            <objects>
+                <tabBarController id="9pW-Ln-jJR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7wA-fp-st0"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vry-8X-Agk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="selectedImageTintColor" systemColor="systemPinkColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="B5Z-EG-9AJ" kind="relationship" relationship="viewControllers" id="qDi-KH-7Ow"/>
+                        <segue destination="qmx-sv-MK8" kind="relationship" relationship="viewControllers" id="mRk-GA-lkB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgM-en-GSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="162"/>
+        </scene>
+        <!--All Coin-->
+        <scene sceneID="CdF-yE-54k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B5Z-EG-9AJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="All Coin" image="list.dash" catalog="system" id="iK1-I4-1p7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Gq-tL-u8g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n5f-ow-UqK" kind="relationship" relationship="rootViewController" id="hPR-Ao-3pd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ho2-cn-5am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434.7826086956522" y="-473.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
